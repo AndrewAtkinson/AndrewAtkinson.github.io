@@ -11,6 +11,6 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->version();
-});
+$app->post('/deploy', [
+  'uses' => 'HomeController@deploy',
+]);
