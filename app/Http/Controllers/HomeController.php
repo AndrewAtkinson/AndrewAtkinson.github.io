@@ -14,8 +14,9 @@ class HomeController extends Controller
         //
     }
 
-  public function index()
+  public function deploy()
   {
-    dd('works');
+    $event = new GitEvent;
+    Event::fire($event->push());
   }
 }
